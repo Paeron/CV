@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+		<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+		<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	</head>
+  	<style>
+  	.page {
+  		font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  	}
+  	.toolbar {
+  		background-color: #708f45;
+  		color: #fff;
+  	}
+  	.toolbar__title {
+  		color: #fff !important;
+  	}
+  	h3 {
+  		padding-top: 40px;
+  		opacity: 0.9;
+  		text-align: center;
+  	}
+  	img {
+  		width: 100%;
+  		margin: auto auto;
+  	}
+  	#pdf {
+  		width: 100%;
+  	}
+  	.lightgreen {
+  		background-color: white;
+  	}
+  	p {
+  		text-align: left;
+  		font-size: 18px;
+  		font-family: Helvetica;
+  		margin-left: 20px;
+  		margin-right: 20px;
+  	}
+  	.extramargin {
+  		margin-left: 90px;
+  	}
+  	span {
+  		font-size: 30px;
+  		margin-top: 15px;
+  		margin-bottom: 15px;
+  	}
+  	a {
+  		color: #708f45;
+  	}
+  	.ons-icon {
+  		color: white;
+  	}
+
+  	</style>
+	<body>
+<ons-splitter>
+  <ons-splitter-side id="menu" side="right" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+        </ons-list-item>
+        
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          Projects
+        </ons-list-item>
+        
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          CV as PDF
+        </ons-list-item>
+        
+        <ons-list-item onclick="fn.load('qr.html')" tappable>
+          QR
+        </ons-list-item>
+        
+        <ons-list-item onclick="fn.load('contact.html')" tappable>
+          Contact
+        </ons-list-item>
+        
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="right">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Per Jaakonantti
+
+      </div>
+    </ons-toolbar>
+    <div>
+    	<h3><b>About me</b><h3>
+    		<p>I'm studying <i>Interactive Media Technology</i> at KTH (Royal Institute of Technology). It's a Master's programme and I'm currently looking for <b>Master Thesis</b> opportunites.</p>
+    		<p>Currently I'm also a UX-developer at <a href="https://armada.nu/">THS Armada</a>. I've been a Diversity and Equality Ombudsman at the Chapter of Media Technology.</p>
+    		<p>On this small website there are links to some of my projects. There is also a link to a PDF of my CV and a QR code for sharing this site.</p>
+    </div>
+  </ons-page>
+</template>
+
+<template id="settings.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="right">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Projects
+      </div>
+    </ons-toolbar>
+    <ons-list modifier="inset">
+    	<h3> Some of my Projects</h3>
+    	
+    <ons-list-item>
+      <div class="left">
+        <img class="list-item__thumbnail" src="images/umb.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Umb-VR-ella</span><span class="list-item__subtitle">Group - In Development - Ask me about it!</span>
+      </div>
+    </ons-list-item>
+        
+    <ons-list-item>
+      <div class="left">
+        <img class="list-item__thumbnail" src="images/europe.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Europe Travels</span><span class="list-item__subtitle">Myself - Autumn 2017 - <a href="https://paeron.github.io/EuropeTravels/">Link</a></span>
+      </div>
+    </ons-list-item>
+
+    <ons-list-item>
+      <div class="left">
+        <img class="list-item__thumbnail" src="images/rnn.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">RNN</span><span class="list-item__subtitle">Myself - Summer 2017 - <a href="https://paeron.github.io/RNN/">Link</a></span>
+      </div>
+    </ons-list-item>
+
+    <ons-list-item>
+      <div class="left">
+        <img class="list-item__thumbnail" src="images/mobilu.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Mobilu</span><span class="list-item__subtitle">Group - Spring 2017 - <a href="https://mobilu.github.io/Project/">Link</a></span>
+      </div>
+    </ons-list-item>
+    
+    <ons-list-item>
+      <div class="left">
+        <img class="list-item__thumbnail" src="images/nobel.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Le Bon Nobel</span><span class="list-item__subtitle">Group - Spring 2017 - <a href="https://lebonnobel.github.io/nobel/">Link</a></span>
+      </div>
+    </ons-list-item>
+    
+    <ons-list-item>
+      <div class="left">
+        <img class="list-item__thumbnail" src="images/singapore.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Singapore Travels</span><span class="list-item__subtitle">Myself - Spring 2017 - <a href="https://paeron.github.io/SingaporeTravels/">Link</a></span>
+      </div>
+    </ons-list-item>
+    
+    <ons-list-item>
+      <div class="left">
+        <img class="list-item__thumbnail" src="images/bachelor.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Bachelor's thesis</span><span class="list-item__subtitle">Pair - Spring 2016 - <a href="http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A939515&dswid=393">Link</a></span>
+      </div>
+    </ons-list-item>
+    
+	</ons-list>
+
+  </ons-page>
+</template>
+
+<template id="about.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="right">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        CV as PDF
+      </div>
+
+    </ons-toolbar>
+    <br>
+    <h3>Pressing the icon will direct you to where the pdf is stored</h3>
+    <br>
+    <h3><a id="pdf" href="https://www.dropbox.com/s/hdniecm21unpxzc/CV_2017_Per.pdf?dl=0"><i class="fa fa-file-pdf-o fa-5x" aria-hidden="true"></i></a></h3>
+  </ons-page>
+</template>
+
+<template id="qr.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="right">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        QR  <i class="fa fa-qrcode" aria-hidden="true"></i>
+      </div>
+    </ons-toolbar>
+    <p></p>
+    <h3>Scan this code to share this website</h3>
+    <img src="images/qrcode.png"/>
+  </ons-page>
+</template>
+
+<template id="contact.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="right">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Contact
+      </div>
+    </ons-toolbar>
+    	<br>
+    	<h3><b>How to keep it touch with me!</b></h3>
+    	<p class="extramargin">E-mails are too old, right?</p>
+    	<p class="extramargin">
+    		
+    		<span><a href="https://www.facebook.com/per.jaakonantti"><i class="fa fa-facebook-square fa-1x" aria-hidden="true"></i></a> - Facebook<br></span>
+    		<span><a href="https://github.com/Paeron"><i class="fa fa-github-square fa-1x" aria-hidden="true"></i></a> - Github<br></span>
+    		<span><a href="https://www.instagram.com/paeron/"><i class="fa fa-instagram fa-1x" aria-hidden="true"></i></a> - Instagram<br></span>
+    		<span><a href="https://se.linkedin.com/in/per-jaakonantti-03a961aa"><i class="fa fa-linkedin-square fa-1x" aria-hidden="true"></i></a> - LinkedIn</span>
+    		
+    	</p>
+  </ons-page>
+</template>
+	<script>
+window.fn = {};
+
+window.fn.open = function() {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+
+window.fn.load = function(page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('menu');
+  content.load(page)
+    .then(menu.close.bind(menu));
+};
+	</script>
+	</body>
+</html>
